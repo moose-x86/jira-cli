@@ -235,10 +235,11 @@ requirejs([
         .command('worklogadd <issue> <timeSpent> [comment]')
         .description('Log work for an issue')
         .option("-s, --startedAt [value]", "Set date of work (default is now)")
+        .option("-n, --newEstimate [value]", "Set new estimate for task")
         .action(function(issue, timeSpent, comment, p) {
             var o = p.startedAt || new Date().toString(),
                 s = new Date(o);
-            worklog.add(issue, timeSpent, comment, s);
+            worklog.add(issue, timeSpent, comment, s, p.newEstimate);
         }).on('--help', function() {
             console.log('  Worklog Add Help:');
             console.log();
