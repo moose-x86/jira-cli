@@ -250,6 +250,7 @@ program
   .option('-T --type <type>', 'NUMERIC Issue type', parseInt)
   .option('-s --subtask <subtask>', 'Issue subtask', String)
   .option('-S --summary <summary>', 'Issue Summary', String)
+  .option('-e --estimate <estimete>', 'Issue original estimate', parseInt)
   .option('-d --description <description>', 'Issue description', String)
   .option('-a --assignee <assignee>', 'Issue assignee', String)
   .option('-v --verbose', 'Verbose debugging output')
